@@ -6,7 +6,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #fdfdfd, #d60a0a8c);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -14,8 +14,8 @@ body {
   padding: 20px;
 }
 
-calculator-container {
-  background: rgb(231, 0, 0);
+.calculator-container {
+  background: white;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   padding: 40px;
@@ -25,11 +25,12 @@ calculator-container {
 }
 
 h1 {
-  color: rgb(0, 0, 0);
+  color: #333;
   margin-bottom: 30px;
   font-size: 2.5em;
   font-weight: 300;
 }
+
 .input-group {
   margin-bottom: 25px;
 }
@@ -45,20 +46,21 @@ label {
 input[type="number"] {
   width: 100%;
   padding: 15px;
-  border: 2px solid #fdf4f4;
+  border: 2px solid #e0e0e0;
   border-radius: 10px;
   font-size: 16px;
   transition: all 0.3s ease;
   background: #f9f9f9;
 }
+
 input[type="number"]:focus {
   outline: none;
-  border-color: #667;
+  border-color: #667eea;
   background: white;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-.oprations {
+.operations {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
@@ -78,30 +80,32 @@ button {
 }
 
 #tambahBtn {
-  background: linear-gradient(45deg, #4caf50, #81c784);
+  background: linear-gradient(45deg, #4caf50, #45a049);
   color: white;
 }
+
 #kurangBtn {
-  background: linear-gradient(45deg, #f44336, #e57373);
+  background: linear-gradient(45deg, #f44336, #d32f2f);
   color: white;
 }
+
 #kaliBtn {
-  background: linear-gradient(45deg, #2196f3, #64b5f6);
+  background: linear-gradient(45deg, #2196f3, #1976d2);
   color: white;
 }
+
 #bagiBtn {
-  background: linear-gradient(45deg, #ff9800, #ffc107);
+  background: linear-gradient(45deg, #ff9800, #f57c00);
   color: white;
 }
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 button:active {
   transform: translateY(0);
-  box-shadow: none;
 }
 
 .result-container {
@@ -113,22 +117,22 @@ button:active {
 }
 
 #hasil {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 1.4em;
+  font-weight: 600;
   color: #333;
-  margin-top: 10px;
+  margin: 0;
 }
 
 .error {
-  color: red;
-  font-size: 16px;
-  margin-top: 10px;
+  color: #e74c3c;
+  background: #ffeaea;
+  border-left-color: #e74c3c;
 }
 
 .success {
-  color: green;
-  font-size: 16px;
-  margin-top: 10px;
+  color: #27ae60;
+  background: #eafaf1;
+  border-left-color: #27ae60;
 }
 
 @media (max-width: 480px) {

@@ -52,3 +52,34 @@ searchBtn.addEventListener("click", () => {
 });
 
 checkWeather("Jakarta");
+
+// Fungsi untuk toggle tema
+function toggleTheme() {
+  document.body.classList.toggle("light-theme");
+  if (document.body.classList.contains("light-theme")) {
+    localStorage.setItem("theme", "light");
+  } else {
+    localStorage.setItem("theme", "dark");
+  }
+}
+
+// Load theme preference on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+    document.body.classList.add("light-theme");
+  } else {
+    document.body.classList.remove("light-theme");
+  }
+  checkWeather("Indramayu");
+});
+
+// Mousemove effect for card
+document.addEventListener("mousemove", (e) => {
+  const card = document.querySelector(".card");
+  const rect = card.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  card.style.setProperty("--mouse-x", `${x}px`);
+  card.style.setProperty("--mouse-y", `${y}px`);
+});

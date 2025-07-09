@@ -9,9 +9,27 @@
   </head>
   <body>
     <div class="card">
+      <div class="header-buttons">
+        <button class="theme-toggle" onclick="toggleTheme()">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z"
+            />
+          </svg>
+        </button>
+
+        <button class="location-btn" onclick="getCurrentLocation()">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"
+            />
+          </svg>
+        </button>
+      </div>
+
       <div class="search">
-        <input type="text" placeholder="enter city name" spellcheck="false" />
-        <button onclick="searchWeater()">
+        <input type="text" placeholder="Enter city name" spellcheck="false" />
+        <button onclick="searchWeather()">
           <svg viewBox="0 0 24 24">
             <path
               d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"

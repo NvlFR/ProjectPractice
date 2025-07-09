@@ -41,31 +41,31 @@
       <div class="loading"></div>
 
       <div class="weather">
-        <img src="images/rain.png" alt="weatherIcon" class="weather-icon" />
+        <img src="images/rain.png" class="weather-icon" alt="Weather Icon" />
 
-        <h1 class="temp">20℃</h1>
+        <h1 class="temp">28°C</h1>
         <h2 class="city">New York</h2>
 
         <div class="details">
           <div class="col">
-            <img src="images/humidity.png" alt="humidity Icon" />
+            <img src="images/humidity.png" alt="Humidity Icon" />
             <div>
-              <p class="humdity">50%</p>
-              <p>Humidity/p></p>
+              <p class="humidity">50%</p>
+              <p>Humidity</p>
             </div>
           </div>
           <div class="col">
             <img src="images/wind.png" alt="Wind Icon" />
-          </div>
-          <div>
-            <p class="wind">15 km/h</p>
-            <p>Wind Speed</p>
+            <div>
+              <p class="wind">15 km/h</p>
+              <p>Wind Speed</p>
+            </div>
           </div>
         </div>
 
         <div class="forecast">
           <h3 class="forecast-title">5-Day Forecast</h3>
-          <div class="forecast-da"></div>
+          <div class="forecast-days"></div>
         </div>
 
         <div class="additional-info">
@@ -79,7 +79,7 @@
           </div>
           <div class="info-item">
             <p class="info-label">Visibility</p>
-            <p class="info-value" id="visibility">--Km</p>
+            <p class="info-value" id="visibility">-- km</p>
           </div>
           <div class="info-item">
             <p class="info-label">Sunrise</p>
@@ -91,11 +91,13 @@
           </div>
         </div>
       </div>
+
       <div class="weather-not-found">
-        <p>Kota tidak ditemukan atau terjadi kesalanan</p>
-        <p>Mohon coba lagi dengan nama kota yang valid</p>
+        <p>Kota tidak ditemukan atau terjadi kesalahan.</p>
+        <p>Mohon coba lagi dengan nama kota yang valid.</p>
       </div>
-      <div class="toast" id="toasNotification"></div>
+
+      <div id="toastNotification" class="toast"></div>
     </div>
     <script src="script.js"></script>
   </body>

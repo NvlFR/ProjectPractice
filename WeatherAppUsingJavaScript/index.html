@@ -5,35 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>WeatherApp</title>
+    <link rel="icon" href="images/rain.png" type="image/x-icon" />
   </head>
   <body>
     <div class="card">
       <div class="search">
         <input type="text" placeholder="enter city name" spellcheck="false" />
-        <button><img src="images/search.png" /></button>
+        <button onclick="searchWeater()">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            />
+          </svg>
+        </button>
       </div>
+
+      <div class="loading"></div>
+
       <div class="weather">
-        <img src="images/rain.png" class="weather-icon" />
-        <h1 class="temp">28°c</h1>
+        <img src="images/rain.png" alt="weatherIcon" class="weather-icon" />
+
+        <h1 class="temp">20℃</h1>
         <h2 class="city">New York</h2>
+
         <div class="details">
           <div class="col">
-            <img src="images/humidity.png" />
+            <img src="images/humidity.png" alt="humidity Icon" />
             <div>
-              <p class="humidity">50%</p>
-              <p>Humadity</p>
+              <p class="humdity">50%</p>
+              <p>Humidity/p></p>
             </div>
           </div>
           <div class="col">
-            <img src="images/wind.png" />
-            <div>
-              <p class="wind">15 km/h</p>
-              <p>Wind Speed</p>
-            </div>
+            <img src="images/wind.png" alt="Wind Icon" />
+          </div>
+          <div>
+            <p class="wind">15 km/h</p>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+
+        <div class="forecast">
+          <h3 class="forecast-title">5-Day Forecast</h3>
+          <div class="forecast-da"></div>
+        </div>
+
+        <div class="additional-info">
+          <div class="info-item">
+            <p class="info-label">Feels Like</p>
+            <p class="info-value" id="feels-like">--°C</p>
+          </div>
+          <div class="info-item">
+            <p class="info-label">Pressure</p>
+            <p class="info-value" id="pressure">-- hPa</p>
+          </div>
+          <div class="info-item">
+            <p class="info-label">Visibility</p>
+            <p class="info-value" id="visibility">--Km</p>
+          </div>
+          <div class="info-item">
+            <p class="info-label">Sunrise</p>
+            <p class="info-value" id="sunrise">--:-- AM</p>
+          </div>
+          <div class="info-item">
+            <p class="info-label">Sunset</p>
+            <p class="info-value" id="sunset">--:-- PM</p>
+          </div>
         </div>
       </div>
+      <div class="weather-not-found">
+        <p>Kota tidak ditemukan atau terjadi kesalanan</p>
+        <p>Mohon coba lagi dengan nama kota yang valid</p>
+      </div>
+      <div class="toast" id="toasNotification"></div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
